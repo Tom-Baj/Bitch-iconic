@@ -1,0 +1,92 @@
+h1, h2, h3 {
+  font-weight: 600;
+  color: $text-color;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title-brand {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  background: linear-gradient(135deg, 
+    #f472b6 0%, 
+    #ec4899 25%, 
+    #db2777 50%, 
+    #be185d 75%, 
+    #9f1239 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 20px rgba(244, 114, 182, 0.3);
+  filter: drop-shadow(0 2px 8px rgba(244, 114, 182, 0.2));
+  animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+.hero-title-tagline {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 600;
+  color: $text-color;
+  letter-spacing: -0.02em;
+  opacity: 0.95;
+  margin-top: 0.25rem;
+}
+
+@keyframes titleGlow {
+  0% {
+    filter: drop-shadow(0 2px 8px rgba(244, 114, 182, 0.2));
+  }
+  100% {
+    filter: drop-shadow(0 4px 16px rgba(244, 114, 182, 0.4));
+  }
+}
+
+// Responsive pour mobile
+@media (max-width: 768px) {
+  .hero-title {
+    gap: 0.4rem;
+  }
+  
+  .hero-title-brand {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+  }
+  
+  .hero-title-tagline {
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
+  }
+}
+
+h2 {
+  font-size: clamp(1.6rem, 2.6vw, 2rem);
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+button,
+.hero-cta {
+  font: inherit;
+}

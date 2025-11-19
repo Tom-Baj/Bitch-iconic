@@ -1,0 +1,52 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: $text-color;
+    background: linear-gradient(135deg, 
+      $bg-gradient-start, 
+      $bg-gradient-middle, 
+      $bg-gradient-end
+    );
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  main {
+    width: 100%;
+    max-width: 960px;
+    padding: 2rem 1.5rem 4rem;
+    margin-top: 70px; // Espace pour le menu fixe
+  }
+
+  section,
+header {
+  width: 100%;
+  display: block;
+}
+
+footer {
+  width: 100%;
+  max-width: 960px;
+  padding: 2rem 1.5rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#theme {
+  margin-top: 5rem;
+}
+
+#theme .theme-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+/* Pour mobile : on empile */
+@media (max-width: 768px) {
+  #theme .theme-layout {
+    flex-direction: column;
+  }
+}
+
