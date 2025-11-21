@@ -1,4 +1,4 @@
-.main-nav {
+.site-nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -11,7 +11,7 @@
   box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
 }
 
-.nav-container {
+.site-nav__container {
   max-width: 960px;
   margin: 0 auto;
   padding: 1rem 1.5rem;
@@ -20,7 +20,7 @@
   align-items: center;
 }
 
-.nav-logo {
+.site-nav__logo {
   font-size: 1.25rem;
   font-weight: 600;
   color: $text-color;
@@ -33,14 +33,14 @@
   }
 }
 
-.nav-menu {
+.site-nav__menu {
   display: flex;
   list-style: none;
   gap: 2rem;
   align-items: center;
 }
 
-.nav-link {
+.site-nav__link {
   color: $text-color;
   text-decoration: none;
   font-size: 0.95rem;
@@ -60,7 +60,7 @@
   }
   
   &:hover,
-  &.active {
+  &.site-nav__link--active {
     color: $accent-color;
     
     &::after {
@@ -69,7 +69,7 @@
   }
 }
 
-.nav-toggle {
+.site-nav__toggle {
   display: none;
   flex-direction: column;
   gap: 4px;
@@ -77,23 +77,23 @@
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  
-  span {
-    width: 24px;
-    height: 2px;
-    background: $text-color;
-    transition: all 0.3s ease;
-    border-radius: 2px;
-  }
+}
+
+.site-nav__toggle-line {
+  width: 24px;
+  height: 2px;
+  background: $text-color;
+  transition: all 0.3s ease;
+  border-radius: 2px;
 }
 
 // Menu mobile
 @media (max-width: 768px) {
-  .nav-toggle {
+  .site-nav__toggle {
     display: flex;
   }
   
-  .nav-menu {
+  .site-nav__menu {
     position: fixed;
     top: 60px;
     left: 0;
@@ -112,22 +112,22 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
   
-  .nav-menu.open {
+  .site-nav__menu.site-nav__menu--open {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
   }
   
-  .nav-toggle.active {
-    span:nth-child(1) {
+  .site-nav__toggle.site-nav__toggle--active {
+    .site-nav__toggle-line:nth-child(1) {
       transform: rotate(45deg) translate(6px, 6px);
     }
     
-    span:nth-child(2) {
+    .site-nav__toggle-line:nth-child(2) {
       opacity: 0;
     }
     
-    span:nth-child(3) {
+    .site-nav__toggle-line:nth-child(3) {
       transform: rotate(-45deg) translate(6px, -6px);
     }
   }

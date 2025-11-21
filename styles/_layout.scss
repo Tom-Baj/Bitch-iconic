@@ -33,11 +33,11 @@ footer {
   text-align: center;
 }
 
-#theme {
+.theme {
   margin-top: 5rem;
 }
 
-#theme .theme-layout {
+.theme__layout {
   display: flex;
   gap: 2rem;
   align-items: stretch;
@@ -45,7 +45,7 @@ footer {
 
 /* Pour mobile : on empile */
 @media (max-width: 768px) {
-  #theme .theme-layout {
+  .theme__layout {
     flex-direction: column;
   }
 }

@@ -10,14 +10,14 @@ h1 {
   margin-bottom: 1rem;
 }
 
-.hero-title {
+.hero__title {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
 }
 
-.hero-title-brand {
+.hero__title-brand {
   font-size: clamp(3rem, 6vw, 4.5rem);
   font-weight: 700;
   line-height: 1;
@@ -37,7 +37,7 @@ h1 {
   animation: titleGlow 3s ease-in-out infinite alternate;
 }
 
-.hero-title-tagline {
+.hero__title-tagline {
   font-size: clamp(1.4rem, 3vw, 2rem);
   font-weight: 600;
   color: $text-color;
@@ -57,15 +57,15 @@ h1 {
 
 // Responsive pour mobile
 @media (max-width: 768px) {
-  .hero-title {
+  .hero__title {
     gap: 0.4rem;
   }
   
-  .hero-title-brand {
+  .hero__title-brand {
     font-size: clamp(2.5rem, 8vw, 3.5rem);
   }
   
-  .hero-title-tagline {
+  .hero__title-tagline {
     font-size: clamp(1.2rem, 4vw, 1.6rem);
   }
 }
@@ -87,6 +87,6 @@ p {
 }
 
 button,
-.hero-cta {
+.hero__cta {
   font: inherit;
 }

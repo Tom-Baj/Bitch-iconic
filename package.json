@@ -1,0 +1,24 @@
+{
+  "name": "bitchiconic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tom-Baj/Bitch-iconic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Tom-Baj/Bitch-iconic/issues"
+  },
+  "homepage": "https://github.com/Tom-Baj/Bitch-iconic#readme",
+  "dependencies": {
+    "animejs": "^4.2.2"
+  }
+}
