@@ -1,3 +1,7 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
 h1, h2, h3 {
   font-weight: 600;
   color: $text-color;
@@ -18,24 +22,26 @@ h1 {
 }
 
 .hero__title-brand {
-  font-size: clamp(3rem, 6vw, 4.5rem);
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.04em;
-  background: linear-gradient(135deg, 
-    #f472b6 0%, 
-    #ec4899 25%, 
-    #db2777 50%, 
-    #be185d 75%, 
-    #9f1239 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: 0 4px 20px rgba(244, 114, 182, 0.3);
-  filter: drop-shadow(0 2px 8px rgba(244, 114, 182, 0.2));
-  animation: titleGlow 3s ease-in-out infinite alternate;
+color: #ff1493;
+font-family: Funhouse, serif;
+font-weight: 600;
+font-size: calc(20px + 5vw);
+opacity: 0.95;
+text-align: center;
+letter-spacing: 5px;
+font-family: "Luckiest Guy", cursive;
+font-weight: 400;
+font-style: normal;
+text-shadow: 0 1px 0 hsl(174, 5%, 80%), 0 2px 0 hsl(174, 5%, 75%),
+  0 3px 0 hsl(174, 5%, 70%), 0 4px 0 hsl(174, 5%, 66%),
+  0 5px 0 hsl(174, 5%, 64%), 0 6px 0 hsl(174, 5%, 62%),
+  0 7px 0 hsl(174, 5%, 61%), 0 8px 0 hsl(174, 5%, 60%),
+  0 9px 0 hsl(174, 5%, 59%), 0 10px 0 hsl(174, 5%, 56%),
+  0 0 5px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.2),
+  0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2),
+  0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.3);
 }
+
 
 .hero__title-tagline {
   font-size: clamp(1.4rem, 3vw, 2rem);
