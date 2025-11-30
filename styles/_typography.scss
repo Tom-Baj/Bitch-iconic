@@ -2,7 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 600;
   color: $text-color;
 }
@@ -19,43 +21,43 @@ h1 {
   flex-direction: column;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
-}
 
-.hero__title-brand {
-color: #ff1493;
-font-family: Funhouse, serif;
-font-weight: 600;
-font-size: calc(20px + 5vw);
-opacity: 0.95;
-text-align: center;
-letter-spacing: 5px;
-font-family: "Luckiest Guy", cursive;
-font-weight: 400;
-font-style: normal;
-text-shadow: 0 1px 0 hsl(174, 5%, 80%), 0 2px 0 hsl(174, 5%, 75%),
-  0 3px 0 hsl(174, 5%, 70%), 0 4px 0 hsl(174, 5%, 66%),
-  0 5px 0 hsl(174, 5%, 64%), 0 6px 0 hsl(174, 5%, 62%),
-  0 7px 0 hsl(174, 5%, 61%), 0 8px 0 hsl(174, 5%, 60%),
-  0 9px 0 hsl(174, 5%, 59%), 0 10px 0 hsl(174, 5%, 56%),
-  0 0 5px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.2),
-  0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2),
-  0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.3);
-}
+  &-brand {
+    color: #ff1493;
+    font-family: Funhouse, serif;
+    font-weight: 600;
+    font-size: calc(20px + 5vw);
+    opacity: 0.95;
+    text-align: center;
+    letter-spacing: 5px;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 0 1px 0 hsl(174, 5%, 80%), 0 2px 0 hsl(174, 5%, 75%),
+      0 3px 0 hsl(174, 5%, 70%), 0 4px 0 hsl(174, 5%, 66%),
+      0 5px 0 hsl(174, 5%, 64%), 0 6px 0 hsl(174, 5%, 62%),
+      0 7px 0 hsl(174, 5%, 61%), 0 8px 0 hsl(174, 5%, 60%),
+      0 9px 0 hsl(174, 5%, 59%), 0 10px 0 hsl(174, 5%, 56%),
+      0 0 5px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.2),
+      0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2),
+      0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.3);
+  }
 
-
-.hero__title-tagline {
-  font-size: clamp(1.4rem, 3vw, 2rem);
-  font-weight: 600;
-  color: $text-color;
-  letter-spacing: -0.02em;
-  opacity: 0.95;
-  margin-top: 0.25rem;
+  &-tagline {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 600;
+    color: $text-color;
+    letter-spacing: -0.02em;
+    opacity: 0.95;
+    margin-top: 0.25rem;
+  }
 }
 
 @keyframes titleGlow {
   0% {
     filter: drop-shadow(0 2px 8px rgba(244, 114, 182, 0.2));
   }
+
   100% {
     filter: drop-shadow(0 4px 16px rgba(244, 114, 182, 0.4));
   }
@@ -65,14 +67,14 @@ text-shadow: 0 1px 0 hsl(174, 5%, 80%), 0 2px 0 hsl(174, 5%, 75%),
 @media (max-width: 768px) {
   .hero__title {
     gap: 0.4rem;
-  }
-  
-  .hero__title-brand {
-    font-size: clamp(2.5rem, 8vw, 3.5rem);
-  }
-  
-  .hero__title-tagline {
-    font-size: clamp(1.2rem, 4vw, 1.6rem);
+
+    &-brand {
+      font-size: clamp(2.5rem, 8vw, 3.5rem);
+    }
+
+    &-tagline {
+      font-size: clamp(1.2rem, 4vw, 1.6rem);
+    }
   }
 }
 

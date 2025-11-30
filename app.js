@@ -1,4 +1,17 @@
-// Navigation smooth scroll
+// Navigation 
+const nav = document.querySelector('.site-nav');
+//Hidden if scroll 0
+window.addEventListener('scroll', () => {
+  if (window.scrollY === 0) {
+    nav.classList.add('hidden');
+    console.log('hidden');
+  } else {
+    nav.classList.remove('hidden');
+    console.log('visible');
+  }
+});
+
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
