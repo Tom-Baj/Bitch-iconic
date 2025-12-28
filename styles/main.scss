@@ -1,6 +1,9 @@
-@import 'variables';
-@import 'reset';
-@import 'layout';
-@import 'typography';
-@import 'navigation';
-@import 'sections';
+@use "abstracts/variables";
+
+@use "base/reset";
+@use "base/typography";
+
+@use "layout/layout";
+@use "layout/navigation";
+
+@use "sections/sections";
