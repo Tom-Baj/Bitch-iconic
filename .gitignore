@@ -1,12 +1,5 @@
-# Node
 node_modules/
-
-# Sass cache
-.sass-cache/
-
-# MacOS
-.DS_Store
-
-# Builds
 dist/
-build/
+styles/main.css
+styles/main.css.map
+package-lock.json
