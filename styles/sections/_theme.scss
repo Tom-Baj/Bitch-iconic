@@ -1,0 +1,55 @@
+@use "../abstracts/variables" as *;
+
+/* Thème */
+.theme {
+    margin-top: 4.5rem;
+  
+    &__layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      align-items: center;
+  
+      @media (max-width: $bp-md) {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+    &__card {
+      padding: 2rem;
+      border-radius: $radius-md;
+      background: $glass-bg;
+      border: 1px solid rgba(255,255,255,0.35);
+      backdrop-filter: blur(12px);
+      box-shadow: $shadow-soft;
+  
+      h2 { margin-bottom: 0.75rem; }
+      p { margin-bottom: 0.75rem; }
+  
+      &-button {
+        margin-top: 1rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.6rem 1rem;
+        border-radius: $radius-sm;
+        background: rgba($accent-color, 0.12);
+        border: 1px solid rgba($accent-color, 0.16);
+        color: $accent-color;
+        font-weight: 700;
+      }
+    }
+  
+    &__visual {
+      border-radius: $radius-md;
+      min-height: 260px;
+      background: linear-gradient(135deg, rgba($accent-color,0.08), rgba($accent-2,0.06));
+      box-shadow: $shadow-soft;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: darken($accent-color, 10%);
+      font-weight: 700;
+      padding: 1.25rem;
+    }
+  }

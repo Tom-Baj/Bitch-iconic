@@ -1,0 +1,61 @@
+@use "../abstracts/variables" as *;
+
+/* Hero */
+.hero {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    position: relative;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: -60px;
+      transform: translateX(-50%);
+      width: 460px;
+      height: 460px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba($accent-color,0.12), rgba($accent-2,0.08));
+      filter: blur(36px);
+      z-index: 0;
+      pointer-events: none;
+    }
+  
+    &__inner {
+      max-width: 720px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      padding: 2rem 1rem;
+    }
+  
+    &__eyebrow {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: $muted;
+      margin-bottom: 0.6rem;
+    }
+  
+    &__subtitle {
+      font-size: $scale-3;
+      color: rgba($text-color, 0.95);
+      margin-bottom: 1.25rem;
+    }
+  
+    &__cta {
+      display: inline-block;
+      padding: 0.85rem 1.8rem;
+      border-radius: $radius-pill;
+      background: linear-gradient(90deg, $accent-color, $accent-2);
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: $shadow-strong;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+  
+      &:hover { transform: translateY(-4px); opacity: 0.98; }
+      &:active { transform: translateY(-1px); }
+    }
+  }

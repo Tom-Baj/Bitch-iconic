@@ -1,3 +1,4 @@
+@use "../abstracts/variables" as *;
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Luckiest+Guy&display=swap');
 
@@ -64,5 +65,5 @@ button, .hero__cta { font: inherit; }
 
 /* Responsive tweaks */
 @media (max-width: $bp-md) {
-  .hero__title &-brand { font-size: clamp(2.4rem, 9vw, 3.6rem); }
+  .hero__title-brand { font-size: clamp(2.4rem, 9vw, 3.6rem); }
 }

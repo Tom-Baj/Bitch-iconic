@@ -3,7 +3,6 @@
 @use "base/reset";
 @use "base/typography";
 
-@use "layout/layout";
-@use "layout/navigation";
+@use "layout/index" as layout;
 
-@use "sections/sections";
+@use "sections/index" as sections;
