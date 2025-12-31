@@ -1,3 +1,6 @@
+// Import des styles SCSS
+import './styles/main.scss';
+
 // Navigation 
 const nav = document.querySelector('.site-nav');
 //Hidden if scroll 0
