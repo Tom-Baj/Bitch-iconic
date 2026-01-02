@@ -1,5 +1,15 @@
+# Dépendances
 node_modules/
+package-lock.json
+
+# Build
 dist/
+
+# CSS généré
 styles/main.css
 styles/main.css.map
-package-lock.json
+
+# OS / éditeur
+.DS_Store
+.vscode/*
+!.vscode/settings.json
