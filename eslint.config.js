@@ -1,5 +1,4 @@
-// Basic ESLint config so the VS Code ESLint extension and `eslint .` both work
-// Adjust rules later as needed.
+// ESLint 9.x flat config
 import js from '@eslint/js';
 import globals from 'globals';
 
@@ -13,13 +12,14 @@ export default [
         ...globals.browser,
       },
     },
-    ignores: ['node_modules/**', 'dist/**'],
     rules: {
-      // keep rules minimal to start; customize as desired
+      ...js.configs.recommended.rules,
       'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       'no-console': 'off',
     },
-    extends: [js.configs.recommended],
+  },
+  {
+    ignores: ['node_modules/**', 'dist/**'],
   },
 ];
 
