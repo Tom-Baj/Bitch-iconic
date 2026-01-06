@@ -22,48 +22,6 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  font-size: clamp(3.4rem, 12vw, 5.4rem);
   line-height: 1.05;
-}
-
-.hero__title {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  margin-bottom: 1.25rem;
-
-  &-brand {
-    color: $accent-color;
-    font-family: 'Luckiest Guy', cursive;
-    font-weight: 400;
-    font-size: clamp(2.8rem, 8vw, 4.2rem);
-    text-align: center;
-    text-shadow: 0 6px 18px rgba(244,114,182,0.08);
-  }
-
-  &-tagline {
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
-    font-weight: 600;
-    color: $text-color;
-  }
-}
-
-@keyframes titleGlow {
-  0% { filter: drop-shadow(0 2px 8px rgba(244,114,182,0.12)); }
-  100% { filter: drop-shadow(0 6px 20px rgba(244,114,182,0.24)); }
-}
-
-/* Utility */
-.lead {
-  font-size: $scale-3;
-  color: rgba($text-color, 0.95);
-}
-
-p { line-height: 1.6; margin-bottom: 0.9rem; }
-
-button, .hero__cta { font: inherit; }
-
-/* Responsive tweaks */
-@media (max-width: $bp-md) {
-  .hero__title-brand { font-size: clamp(2.4rem, 9vw, 3.6rem); }
 }

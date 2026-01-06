@@ -1,61 +1,143 @@
-@use "../abstracts/variables" as *;
+@use '../abstracts/variables' as *;
 
 /* Hero */
 .hero {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-    text-align: center;
+  /* Full-viewport hero that actually breathes (mobile-safe viewport units) */
+  min-height: 100svh;
+  display: grid;
+  align-items: center;
+
+  /* compense la nav absolute */
+  padding-top: clamp(7rem, 14vh, 9rem);
+
+  /* Give the hero real visual presence */
+  padding: clamp(5rem, 10vh, 8rem) clamp(1.25rem, 4vw, 3rem);
+
+  /* Default: premium/clean layout (not nightlife) */
+  text-align: left;
+  position: relative;
+
+  /* Subtle background layers to avoid a flat page */
+  background:
+    radial-gradient(
+      1200px 800px at 20% 10%,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0) 60%
+    ),
+    radial-gradient(
+      900px 600px at 80% 30%,
+      rgba($accent-2, 0.08),
+      rgba(255, 255, 255, 0) 55%
+    ),
+    linear-gradient(180deg, #ffffff 0%, #f6f7fb 100%);
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: clamp(-80px, -6vh, -40px);
+    transform: translateX(-50%);
+    width: clamp(320px, 55vw, 520px);
+    height: clamp(320px, 55vw, 520px);
+    border-radius: 50%;
+    background: radial-gradient(
+      circle at 30% 30%,
+      rgba($accent-color, 0.14),
+      rgba($accent-2, 0.1)
+    );
+    filter: blur(clamp(28px, 3.2vw, 44px));
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  &__inner {
+    width: min(70ch, 100%);
     position: relative;
-  
-    &::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: -60px;
-      transform: translateX(-50%);
-      width: 460px;
-      height: 460px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, rgba($accent-color,0.12), rgba($accent-2,0.08));
-      filter: blur(36px);
-      z-index: 0;
-      pointer-events: none;
+    z-index: 1;
+    display: grid;
+    gap: clamp(0.9rem, 2.2vw, 1.4rem);
+  }
+
+  &__eyebrow {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: $muted;
+    margin: 0;
+  }
+
+  &__title {
+    display: grid;
+    gap: 0.35rem;
+    line-height: 1;
+    margin: 0;
+
+    &-brand {
+      color: $accent-color;
+      font-family: 'Luckiest Guy', cursive;
+      font-weight: 400;
+      font-size: clamp(3rem, 8.5vw, 5.2rem);
+      letter-spacing: -0.04em;
+      text-shadow: 0 10px 24px rgba($accent-color, 0.1);
+      margin: 0;
     }
-  
-    &__inner {
-      max-width: 720px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-      padding: 2rem 1rem;
-    }
-  
-    &__eyebrow {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: $muted;
-      margin-bottom: 0.6rem;
-    }
-  
-    &__subtitle {
-      font-size: $scale-3;
-      color: rgba($text-color, 0.95);
-      margin-bottom: 1.25rem;
-    }
-  
-    &__cta {
-      display: inline-block;
-      padding: 0.85rem 1.8rem;
-      border-radius: $radius-pill;
-      background: linear-gradient(90deg, $accent-color, $accent-2);
-      color: white;
-      text-decoration: none;
-      font-weight: 700;
-      box-shadow: $shadow-strong;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
-  
-      &:hover { transform: translateY(-4px); opacity: 0.98; }
-      &:active { transform: translateY(-1px); }
+
+    &-tagline {
+      font-size: clamp(1.15rem, 2.6vw, 1.8rem);
+      font-weight: 650;
+      color: rgba($text-color, 0.88);
+      line-height: 1.15;
+      margin: 0;
     }
   }
+
+  &__subtitle {
+    font-size: $scale-3;
+    color: rgba($text-color, 0.78);
+    line-height: 1.55;
+    max-width: 60ch;
+    margin: 0;
+  }
+
+  &__cta {
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.95rem 1.35rem;
+    border-radius: $radius-pill;
+    background: linear-gradient(90deg, $accent-color, $accent-2);
+    color: white;
+    text-decoration: none;
+    font-weight: 750;
+    box-shadow: $shadow-strong;
+    transition:
+      transform 0.18s ease,
+      box-shadow 0.18s ease,
+      opacity 0.18s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      opacity: 0.98;
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Mobile: keep the "centered event poster" vibe */
+@media (max-width: 720px) {
+  .hero {
+    text-align: center;
+
+    &__inner {
+      margin-inline: auto;
+    }
+
+    &__cta {
+      justify-self: center;
+    }
+  }
+}
