@@ -4,9 +4,20 @@
 .schedule {
     &__heading { margin-bottom: 1rem; }
   
-    &__list { display: grid; gap: 1rem; }
+    &__layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
   
     &__item {
+      width: 30%;
+      height: 100%;
+      max-width: 200px;
       padding: 1rem;
       border-radius: $radius-sm;
       background: rgba(255,255,255,0.9);

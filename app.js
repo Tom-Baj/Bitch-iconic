@@ -1,8 +1,8 @@
 // Import des styles SCSS
 import './styles/main.scss';
 
-// Navigation 
-const nav = document.querySelector('.site-nav');
+// Navigation
+/* const nav = document.querySelector('.site-nav');
 //Hidden if scroll 0
 window.addEventListener('scroll', () => {
   if (window.scrollY === 0) {
@@ -12,25 +12,25 @@ window.addEventListener('scroll', () => {
     nav.classList.remove('hidden');
     console.log('visible');
   }
-});
+}); */
 
 // Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     const targetId = this.getAttribute('href');
     if (targetId === '#') return;
-    
+
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
       const navHeight = document.querySelector('.site-nav').offsetHeight;
       const targetPosition = targetElement.offsetTop - navHeight;
-      
+
       window.scrollTo({
         top: targetPosition,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
-      
+
       // Fermer le menu mobile si ouvert
       const navMenu = document.querySelector('.site-nav__menu');
       const navToggle = document.querySelector('.site-nav__toggle');
@@ -61,14 +61,17 @@ const navLinks = document.querySelectorAll('.site-nav__link');
 
 function updateActiveLink() {
   const scrollPosition = window.scrollY + 100;
-  
-  sections.forEach(section => {
+
+  sections.forEach((section) => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.offsetHeight;
     const sectionId = section.getAttribute('id');
-    
-    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-      navLinks.forEach(link => {
+
+    if (
+      scrollPosition >= sectionTop &&
+      scrollPosition < sectionTop + sectionHeight
+    ) {
+      navLinks.forEach((link) => {
         link.classList.remove('site-nav__link--active');
         if (link.getAttribute('href') === `#${sectionId}`) {
           link.classList.add('site-nav__link--active');
@@ -80,4 +83,3 @@ function updateActiveLink() {
 
 window.addEventListener('scroll', updateActiveLink);
 updateActiveLink(); // Appel initial
-

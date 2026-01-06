@@ -1,121 +1,156 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bitch'iconic</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bitch'iconic</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <!-- Nav -->
+    <header class="site-header">
+      <nav class="site-nav">
+        <div class="site-nav__container">
+          <a href="#hero" class="site-nav__logo">Bitch'iconic</a>
+          <ul class="site-nav__menu">
+            <li><a href="#hero" class="site-nav__link">Accueil</a></li>
+            <li><a href="#theme" class="site-nav__link">Thème</a></li>
+            <li>
+              <a href="#reservation" class="site-nav__link">Réservation</a>
+            </li>
+            <li><a href="#programme" class="site-nav__link">Programme</a></li>
+            <li><a href="#infos" class="site-nav__link">Infos</a></li>
+          </ul>
+          <button
+            class="site-nav__toggle"
+            aria-label="Menu"
+            aria-expanded="false"
+          >
+            <span class="site-nav__toggle-line"></span>
+            <span class="site-nav__toggle-line"></span>
+            <span class="site-nav__toggle-line"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
 
-<!-- Nav -->
-<nav class="site-nav">
-  <div class="site-nav__container">
-    <a href="#hero" class="site-nav__logo">Bitch'iconic</a>
-    <ul class="site-nav__menu">
-      <li><a href="#hero" class="site-nav__link">Accueil</a></li>
-      <li><a href="#theme" class="site-nav__link">Thème</a></li>
-      <li><a href="#reservation" class="site-nav__link">Réservation</a></li>
-      <li><a href="#programme" class="site-nav__link">Programme</a></li>
-      <li><a href="#infos" class="site-nav__link">Infos</a></li>
-    </ul>
-    <button class="site-nav__toggle" aria-label="Menu" aria-expanded="false">
-      <span class="site-nav__toggle-line"></span>
-      <span class="site-nav__toggle-line"></span>
-      <span class="site-nav__toggle-line"></span>
-    </button>
-  </div>
-</nav>
+    <!-- Main -->
+    <main>
+      <!-- Hero -->
+      <section id="hero" class="hero">
+        <div class="hero__inner">
+          <p class="hero__eyebrow">
+            Week-end anniversaire aux Cabanes Parisiennes · Châtillon-Coligny
+          </p>
 
-<!-- Main -->
-<main>
+          <h1 class="hero__title">
+            <span class="hero__title-brand">Bitch'iconic</span>
+            <span class="hero__title-tagline"
+              >choisis ton idole, deviens légendaire</span
+            >
+          </h1>
 
-  <!-- Hero -->
-  <header id="hero" class="hero">
-    <div class="hero__inner">
-      <p class="hero__eyebrow">
-        Week-end anniversaire aux Cabanes Parisiennes · Châtillon-Coligny
+          <p class="hero__subtitle">
+            Prépare ta plus belle transformation. Ce week-end, tu laisses ton
+            quotidien de côté et tu deviens une icône.
+          </p>
+          <a href="#theme" class="button hero__cta"
+            >Découvrir le thème Bitch’iconic</a
+          >
+        </div>
+      </section>
+
+      <!-- Thème -->
+      <section id="theme" class="theme">
+        <div class="theme__layout">
+          <div class="theme__card">
+            <h2>Le thème : Bitch’iconic</h2>
+            <p>Ce week-end, tu ne viens pas en toi-même : tu viens en icône.</p>
+            <p>
+              Choisis la star qui te fait vibrer, transforme-toi, exagère,
+              amuse-toi. Une fois ton personnage choisi, il est à toi. Pas de
+              copies, pas de doublons.
+            </p>
+            <!--         <button type="button" class="theme__card-button" disabled>Réserve ton icône (bientôt disponible)</button> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Programme -->
+      <section id="programme" class="schedule">
+        <h2 class="schedule__heading">Le programme</h2>
+
+        <div class="schedule__layout">
+          <article class="schedule__item card">
+            <h3 class="schedule__item-title">🔥 Samedi – Ça démarre fort</h3>
+            <p class="schedule__item-text">
+              Barbecue, piscine, musique… et très vite, tout le monde glisse
+              dans son personnage. La soirée part en mode fête iconique jusqu'au
+              bout de la nuit.
+            </p>
+          </article>
+
+          <article class="schedule__item card">
+            <h3 class="schedule__item-title">🌞 Dimanche – Chill iconique</h3>
+            <p class="schedule__item-text">
+              Brunch, piscine, détente, rires, débriefs de la veille… On
+              prolonge l'ambiance, mais version soft & solaire.
+            </p>
+          </article>
+
+          <article class="schedule__item card">
+            <h3 class="schedule__item-title">☕ Lundi – Retour tout doux</h3>
+            <p class="schedule__item-text">
+              Petit-déj ensemble, derniers moments cool avant de reprendre la
+              vraie vie.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Réservation -->
+      <section id="reservation">
+        <h2 class="reservation__heading">Réserve ton icône</h2>
+        <p class="reservation__text">
+          Réserve ton icône pour le week-end Bitch’iconic. Tu pourras choisir
+          ton personnage et le personnage de tes amis.
+        </p>
+        <button type="button" class="reservation__button">Réserver</button>
+      </section>
+
+      <!-- Infos pratiques -->
+      <section id="infos" class="info">
+        <h2 class="info__heading">Infos pratiques</h2>
+
+        <article class="info__item">
+          <h3 class="info__item-title">📅 Dates</h3>
+          <p class="info__item-text">
+            Du samedi 18 juillet (après-midi) au lundi 20 juillet (matin).
+          </p>
+        </article>
+
+        <article class="info__item">
+          <h3 class="info__item-title">📌 Lieu</h3>
+          <p class="info__item-text">
+            Les Cabanes Parisiennes – Châtillon-Coligny.
+          </p>
+        </article>
+
+        <p class="info__summary">
+          Un week-end entier pour profiter, faire la fête, chiller et se
+          transformer en icône.
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p class="site-footer__note">
+        © 2025 Bitch’iconic. Tous droits réservés.
       </p>
-  
-      <h1 class="hero__title">
-        <span class="hero__title-brand">Bitch'iconic</span>
-        <span class="hero__title-tagline">choisis ton idole, deviens légendaire</span>
-      </h1>
-  
-      <p class="hero__subtitle">
-        Prépare ta plus belle transformation. Ce week-end, tu laisses ton quotidien de côté et tu deviens une icône.
-      </p>
-  
-      <a href="#theme" class="hero__cta">
-        Découvrir le thème Bitch’iconic
-      </a>
-    </div>
-  </header>
-  
+    </footer>
 
-  <!-- Thème -->
-  <section id="theme" class="theme">
-    <div class="theme__layout">
-      <div class="theme__card">
-        <h2>Le thème : Bitch’iconic</h2>
-        <p>Ce week-end, tu ne viens pas en toi-même : tu viens en icône.</p>
-        <p>Choisis la star qui te fait vibrer, transforme-toi, exagère, amuse-toi. Une fois ton personnage choisi, il est à toi. Pas de copies, pas de doublons.</p>
-<!--         <button type="button" class="theme__card-button" disabled>Réserve ton icône (bientôt disponible)</button> -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Programme -->
-  <section id="programme" class="schedule">
-    <h2 class="schedule__heading">Le programme</h2>
-  
-    <article class="schedule__item">
-      <h3 class="schedule__item-title">🔥 Samedi – Ça démarre fort</h3>
-      <p class="schedule__item-text">Barbecue, piscine, musique… et très vite, tout le monde glisse dans son personnage. La soirée part en mode fête iconique jusqu'au bout de la nuit.</p>
-    </article>
-  
-    <article class="schedule__item">
-      <h3 class="schedule__item-title">🌞 Dimanche – Chill iconique</h3>
-      <p class="schedule__item-text">Brunch, piscine, détente, rires, débriefs de la veille… On prolonge l'ambiance, mais version soft & solaire.</p>
-    </article>
-  
-    <article class="schedule__item">
-      <h3 class="schedule__item-title">☕ Lundi – Retour tout doux</h3>
-      <p class="schedule__item-text">Petit-déj ensemble, derniers moments cool avant de reprendre la vraie vie.</p>
-    </article>
-  </section>
-  
-  <!-- Réservation -->
-  <section id="reservation">
-    <h2 class="reservation__heading">Réserve ton icône</h2>
-    <p class="reservation__text">Réserve ton icône pour le week-end Bitch’iconic. Tu pourras choisir ton personnage et le personnage de tes amis.</p>
-    <button type="button" class="reservation__button">Réserver</button>
-  </section>
-
-  <!-- Infos pratiques -->
-  <section id="infos" class="info">
-    <h2 class="info__heading">Infos pratiques</h2>
-  
-    <article class="info__item">
-      <h3 class="info__item-title">📅 Dates</h3>
-      <p class="info__item-text">Du samedi 18 juillet (après-midi) au lundi 20 juillet (matin).</p>
-    </article>
-  
-    <article class="info__item">
-      <h3 class="info__item-title">📌 Lieu</h3>
-      <p class="info__item-text">Les Cabanes Parisiennes – Châtillon-Coligny.</p>
-    </article>
-  
-    <p class="info__summary">Un week-end entier pour profiter, faire la fête, chiller et se transformer en icône.</p>
-  </section>
-
-</main>
-
-<!-- Footer -->
-<footer class="site-footer">
-  <p class="site-footer__note">© 2025 Bitch’iconic. Tous droits réservés.</p>
-</footer> 
-
-<!-- Scripts -->
-<script type="module" src="app.js"></script>
-</body>
+    <!-- Scripts -->
+    <script type="module" src="app.js"></script>
+  </body>
 </html>
