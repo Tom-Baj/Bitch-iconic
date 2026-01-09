@@ -1,12 +1,19 @@
-@use "../abstracts/variables" as *;
+@use '../abstracts/variables' as *;
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
   color: $text-color;
-  background: linear-gradient(135deg,
-      $bg-gradient-start,
-      $bg-gradient-middle,
-      $bg-gradient-end);
+  background: linear-gradient(
+    135deg,
+    $bg-gradient-start,
+    $bg-gradient-middle,
+    $bg-gradient-end
+  );
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,7 +22,7 @@ body {
 
 main {
   width: 100%;
-  max-width: 960px;
+  max-width: 1200px;
   padding: 2rem 1.5rem 4rem;
   margin-top: 70px; // Espace pour le menu fixe
 }
