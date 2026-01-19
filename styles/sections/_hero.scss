@@ -18,7 +18,7 @@
   position: relative;
 
   /* Subtle background layers to avoid a flat page */
-  background:
+  /* background:
     radial-gradient(
       1200px 800px at 20% 10%,
       rgba(255, 255, 255, 0.9),
@@ -29,7 +29,7 @@
       rgba($accent-2, 0.08),
       rgba(255, 255, 255, 0) 55%
     ),
-    linear-gradient(180deg, #ffffff 0%, #f6f7fb 100%);
+    linear-gradient(180deg, #ffffff 0%, #f6f7fb 100%); */
 
   &::before {
     content: '';

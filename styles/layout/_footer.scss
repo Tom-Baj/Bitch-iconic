@@ -2,9 +2,9 @@
 
 .site-footer {
   width: 100%;
-  max-width: 960px;
+  max-width: $container-max-width;
   margin: 2.5rem auto 0;
-  padding: 2rem 1.5rem;
+  padding: 2rem $gutter;
   text-align: center;
   color: $muted;
 }
