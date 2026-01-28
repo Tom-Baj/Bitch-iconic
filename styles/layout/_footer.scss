@@ -3,8 +3,8 @@
 .site-footer {
   width: 100%;
   max-width: $container-max-width;
-  margin: 2.5rem auto 0;
-  padding: 2rem $gutter;
+  margin: 0 auto;
+  padding: clamp(2rem, 6vw, 3rem) clamp(1.25rem, 5vw, 3rem);
   text-align: center;
   color: $muted;
 }

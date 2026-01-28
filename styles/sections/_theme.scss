@@ -2,52 +2,188 @@
 
 /* Thème */
 .theme {
-    margin-top: 4.5rem;
-  
-    &__layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      align-items: center;
-  
-      @media (max-width: $bp-md) {
-        grid-template-columns: 1fr;
-      }
-    }
-  
-    &__card {
-      padding: 2rem;
-      border-radius: $radius-md;
-      background: $glass-bg;
-      border: 1px solid rgba(255,255,255,0.35);
-      backdrop-filter: blur(12px);
-      box-shadow: $shadow-soft;
-  
-      h2 { margin-bottom: 0.75rem; }
-      p { margin-bottom: 0.75rem; }
-  
-      &-button {
-        margin-top: 1rem;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.6rem 1rem;
-        border-radius: $radius-sm;
-        background: rgba($accent-color, 0.12);
-        border: 1px solid rgba($accent-color, 0.16);
-        font-weight: 700;
-      }
-    }
-  
-    &__visual {
-      border-radius: $radius-md;
-      min-height: 260px;
-      background: linear-gradient(135deg, rgba($accent-color,0.08), rgba($accent-2,0.06));
-      box-shadow: $shadow-soft;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      padding: 1.25rem;
+  position: relative;
+  padding: clamp(2.5rem, 6vw, 4rem) clamp(1.25rem, 5vw, 3.5rem);
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -18%;
+    top: -30%;
+    width: clamp(320px, 45vw, 560px);
+    height: clamp(320px, 45vw, 560px);
+    border-radius: 50%;
+    background:
+      radial-gradient(
+        circle at 35% 35%,
+        rgba($accent-color, 0.14),
+        rgba(255, 255, 255, 0) 62%
+      );
+    filter: blur(26px);
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -12%;
+    bottom: -40%;
+    width: clamp(260px, 38vw, 480px);
+    height: clamp(260px, 38vw, 480px);
+    border-radius: 46% 54% 48% 52%;
+    background:
+      radial-gradient(
+        circle at 65% 35%,
+        rgba($accent-2, 0.16),
+        rgba(255, 255, 255, 0) 60%
+      );
+    filter: blur(24px);
+    pointer-events: none;
+  }
+
+  &__layout {
+    width: min(920px, 100%);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+    align-items: center;
+
+    @media (max-width: $bp-md) {
+      grid-template-columns: 1fr;
     }
   }
+
+  &__card {
+    position: relative;
+    padding: clamp(1.6rem, 4vw, 2.4rem);
+    border-radius: $radius-md;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px);
+    box-shadow:
+      0 18px 40px rgba(16, 12, 28, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 1.1rem;
+      left: 1.1rem;
+      width: clamp(120px, 20vw, 180px);
+      height: 6px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, $accent-color, $accent-2);
+      opacity: 0.85;
+    }
+
+    h2 {
+      margin-bottom: 0.9rem;
+      font-size: clamp(1.8rem, 4.2vw, 2.4rem);
+      letter-spacing: -0.02em;
+      color: #1a1026;
+    }
+
+    p {
+      margin-bottom: 0.9rem;
+      color: rgba(27, 16, 41, 0.72);
+      line-height: 1.6;
+      max-width: 56ch;
+    }
+
+    .theme__list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0;
+      display: grid;
+      gap: 0.6rem;
+      color: rgba(27, 16, 41, 0.75);
+
+      li {
+        display: flex;
+        gap: 0.6rem;
+        align-items: flex-start;
+
+        &::before {
+          content: '';
+          width: 0.5rem;
+          height: 0.5rem;
+          margin-top: 0.4rem;
+          border-radius: 50%;
+          background: linear-gradient(120deg, $accent-color, $accent-2);
+          flex: 0 0 auto;
+        }
+      }
+    }
+
+    &-button {
+      margin-top: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      border-radius: $radius-sm;
+      background: rgba($accent-color, 0.12);
+      border: 1px solid rgba($accent-color, 0.16);
+      font-weight: 700;
+    }
+  }
+
+  &__visual {
+    border-radius: $radius-md;
+    min-height: 260px;
+    background: linear-gradient(
+      135deg,
+      rgba($accent-color, 0.08),
+      rgba($accent-2, 0.06)
+    );
+    box-shadow: $shadow-soft;
+    display: grid;
+    gap: 1rem;
+    align-content: center;
+    padding: clamp(1.5rem, 3vw, 2rem);
+    color: #1a1026;
+  }
+
+  &__visual-title {
+    font-size: clamp(1.2rem, 2.6vw, 1.6rem);
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &__visual-text {
+    margin: 0;
+    color: rgba(27, 16, 41, 0.7);
+    line-height: 1.5;
+  }
+
+  &__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  &__chip {
+    padding: 0.35rem 0.75rem;
+    border-radius: $radius-pill;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(27, 16, 41, 0.12);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  @media (max-width: $bp-md) {
+    text-align: center;
+
+    &__list li {
+      justify-content: center;
+    }
+
+    &__chips {
+      justify-content: center;
+    }
+  }
+}

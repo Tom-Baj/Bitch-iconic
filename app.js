@@ -61,6 +61,7 @@ const navLinks = document.querySelectorAll('.site-nav__link');
 
 function updateActiveLink() {
   const scrollPosition = window.scrollY + 100;
+  let currentSectionId = null;
 
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;
@@ -71,15 +72,70 @@ function updateActiveLink() {
       scrollPosition >= sectionTop &&
       scrollPosition < sectionTop + sectionHeight
     ) {
-      navLinks.forEach((link) => {
-        link.classList.remove('site-nav__link--active');
-        if (link.getAttribute('href') === `#${sectionId}`) {
-          link.classList.add('site-nav__link--active');
-        }
-      });
+      currentSectionId = sectionId;
     }
   });
+
+  if (!currentSectionId) return;
+
+  const activeLink = Array.from(navLinks).find(
+    (link) => link.getAttribute('href') === `#${currentSectionId}`
+  );
+
+  if (!activeLink) return;
+
+  navLinks.forEach((link) => {
+    link.classList.remove('site-nav__link--active');
+  });
+  activeLink.classList.add('site-nav__link--active');
 }
 
 window.addEventListener('scroll', updateActiveLink);
 updateActiveLink(); // Appel initial
+
+// Compte a rebours
+const countdown = document.querySelector('[data-countdown-target]');
+if (countdown) {
+  const targetValue = countdown.dataset.countdownTarget;
+  const targetDate = new Date(targetValue);
+  const dayEl = countdown.querySelector('[data-unit=\"days\"]');
+  const hourEl = countdown.querySelector('[data-unit=\"hours\"]');
+  const minuteEl = countdown.querySelector('[data-unit=\"minutes\"]');
+  const secondEl = countdown.querySelector('[data-unit=\"seconds\"]');
+
+  if (!Number.isNaN(targetDate.getTime())) {
+    const pad = (value) => String(value).padStart(2, '0');
+    let timer = null;
+
+    const updateCountdown = () => {
+      const now = new Date();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        if (dayEl) dayEl.textContent = '00';
+        if (hourEl) hourEl.textContent = '00';
+        if (minuteEl) minuteEl.textContent = '00';
+        if (secondEl) secondEl.textContent = '00';
+        countdown.classList.add('countdown__timer--ended');
+        if (timer) {
+          clearInterval(timer);
+        }
+        return;
+      }
+
+      const totalSeconds = Math.floor(diff / 1000);
+      const days = Math.floor(totalSeconds / 86400);
+      const hours = Math.floor((totalSeconds % 86400) / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+
+      if (dayEl) dayEl.textContent = pad(days);
+      if (hourEl) hourEl.textContent = pad(hours);
+      if (minuteEl) minuteEl.textContent = pad(minutes);
+      if (secondEl) secondEl.textContent = pad(seconds);
+    };
+
+    updateCountdown();
+    timer = setInterval(updateCountdown, 1000);
+  }
+}

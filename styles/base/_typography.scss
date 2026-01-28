@@ -1,6 +1,6 @@
 @use "../abstracts/variables" as *;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&family=Luckiest+Guy&family=Sora:wght@300;400;500;600;700&display=swap');
 
 /* Base */
 html {
@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  font-family: 'Sora', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   color: $text-color;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;

@@ -1,12 +1,6 @@
 @use '../abstracts/variables' as *;
 
 body {
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    sans-serif;
   color: $text-color;
   background: linear-gradient(
     135deg,
@@ -22,15 +16,14 @@ body {
 
 main {
   width: 100%;
-  max-width: 1200px;
-/*   padding: 2rem 1.5rem 4rem;
-  margin-top: 70px;  */// Espace pour le menu fixe
+  display: grid;
+  gap: clamp(3rem, 7vw, 6rem);
 }
 
 section {
-  margin-top: 3rem;
   width: 100%;
   display: block;
+  scroll-margin-top: 90px;
 }
 
 .hidden {

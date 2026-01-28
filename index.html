@@ -25,13 +25,16 @@
               <a href="#theme" class="site-nav__link">Thème</a>
             </li>
             <li>
-              <a href="#reservation" class="site-nav__link">Réservation</a>
-            </li>
-            <li>
               <a href="#programme" class="site-nav__link">Programme</a>
             </li>
             <li>
+              <a href="#galerie" class="site-nav__link">Galerie</a>
+            </li>
+            <li>
               <a href="#infos" class="site-nav__link">Infos</a>
+            </li>
+            <li>
+              <a href="#reservation" class="site-nav__link">RSVP</a>
             </li>
           </ul>
           <button
@@ -51,41 +54,102 @@
     <main>
       <!-- Hero -->
       <section id="hero" class="hero">
-        <div class="hero__inner">
-          <p class="hero__eyebrow">
-            Week-end anniversaire aux Cabanes Parisiennes · Châtillon-Coligny
-          </p>
+        <div class="hero__content">
+          <p class="hero__label">Invitation privée · Mes 40 ans</p>
 
           <h1 class="hero__title">
-            <span class="hero__title-brand">
-              Bitch'iconic
-            </span>
-            <span class="hero__title-tagline">
-              Choisis ton idole, deviens légendaire !!
-            </span>
+            <span class="hero__title-brand">Bitch'iconic</span>
+            <span class="hero__title-main">Choisis ton idole, deviens légendaire</span>
           </h1>
 
-          <p class="hero__subtitle">
-            Prépare ta plus belle transformation. Ce week-end, tu laisses ton
-            quotidien de côté et tu deviens une icône.
+          <p class="hero__lead">
+            Du samedi 18 juillet 2026 (après-midi) au lundi 20 juillet 2026
+            (matin), aux Cabanes Parisiennes à Châtillon-Coligny. Un week-end
+            festif, simple et joyeux, pour fêter ça ensemble.
           </p>
-         <div class="hero__cta-group">
-          <a href="#theme" class="button hero__cta"
-            >Découvrir le thème Bitch’iconic</a
-          >
-          <a href="#reservation" class="button hero__cta"
-          >Réserver ton icône</a
-          >
-        </div> 
+
+          <div class="hero__cta-group">
+            <a href="#reservation" class="hero__cta hero__cta--primary">
+              Je confirme ma présence
+            </a>
+            <a href="#programme" class="hero__cta hero__cta--ghost">
+              Voir le programme
+            </a>
+          </div>
+
+          <div class="hero__meta">
+            <div class="hero__meta-item">
+              <span class="hero__meta-label">Dates</span>
+              <span class="hero__meta-value">18–20 juillet 2026</span>
+            </div>
+            <div class="hero__meta-item">
+              <span class="hero__meta-label">Lieu</span>
+              <span class="hero__meta-value">Cabanes Parisiennes</span>
+            </div>
+            <div class="hero__meta-item">
+              <span class="hero__meta-label">Ambiance</span>
+              <span class="hero__meta-value">Fête, pool, chill</span>
+            </div>
+          </div>
         </div>
-        <div class="hero__image">
-          <img
-            src="/assets/images/bichette.png"
-            alt="Bitch'iconic"
-            width="100%"
-            height="auto"
-          />
+
+        <div class="hero__visual">
+          <div class="hero__halo" aria-hidden="true"></div>
+          <div class="hero__poster">
+            <img
+              src="/assets/images/bichette.png"
+              alt="Bitch'iconic"
+              width="100%"
+              height="auto"
+            />
+          </div>
+          <div class="hero__badge hero__badge--top">Édition anniversaire</div>
+          <div class="hero__badge hero__badge--bottom">18–20 juillet 2026</div>
         </div>
+
+        <div class="hero__ticker" aria-hidden="true">
+          Mes 40 ans · Bitch'iconic · Week-end anniversaire · Mes 40 ans ·
+          Bitch'iconic · Week-end anniversaire
+        </div>
+      </section>
+
+      <!-- Compte à rebours -->
+      <section id="countdown" class="countdown">
+        <div class="countdown__header">
+          <p class="countdown__eyebrow">Compte à rebours</p>
+          <h2 class="countdown__title">
+            Rendez-vous le samedi 18 juillet 2026
+          </h2>
+          <p class="countdown__subtitle">
+            Heure de Paris (UTC+2). On se retrouve l'après-midi.
+          </p>
+        </div>
+
+        <div
+          class="countdown__timer"
+          data-countdown-target="2026-07-18T14:00:00+02:00"
+          aria-live="polite"
+        >
+          <div class="countdown__item">
+            <span class="countdown__value" data-unit="days">--</span>
+            <span class="countdown__label">Jours</span>
+          </div>
+          <div class="countdown__item">
+            <span class="countdown__value" data-unit="hours">--</span>
+            <span class="countdown__label">Heures</span>
+          </div>
+          <div class="countdown__item">
+            <span class="countdown__value" data-unit="minutes">--</span>
+            <span class="countdown__label">Minutes</span>
+          </div>
+          <div class="countdown__item">
+            <span class="countdown__value" data-unit="seconds">--</span>
+            <span class="countdown__label">Secondes</span>
+          </div>
+        </div>
+        <p class="countdown__note">
+          Le compteur se met à jour automatiquement.
+        </p>
       </section>
 
       <!-- Thème -->
@@ -93,40 +157,65 @@
         <div class="theme__layout">
           <div class="theme__card">
             <h2>Le thème : Bitch’iconic</h2>
-            <p>Ce week-end, tu ne viens pas en toi-même : tu viens en icône.</p>
             <p>
+              Ce week-end, tu ne viens pas en toi-même : tu viens en icône.
               Choisis la star qui te fait vibrer, transforme-toi, exagère,
-              amuse-toi. Une fois ton personnage choisi, il est à toi. Pas de
-              copies, pas de doublons.
+              amuse-toi.
             </p>
-            <!--         <button type="button" class="theme__card-button" disabled>Réserve ton icône (bientôt disponible)</button> -->
+            <p>
+              Une fois ton personnage choisi, il est à toi. Pas de copies, pas
+              de doublons.
+            </p>
+            <ul class="theme__list">
+              <li>Choisis ton idole et assume ton look</li>
+              <li>Prévois un accessoire signature</li>
+              <li>On prend des photos le samedi soir</li>
+            </ul>
+          </div>
+          <div class="theme__visual">
+            <p class="theme__visual-title">Moodboard express</p>
+            <p class="theme__visual-text">
+              Glam, kitsch, pop, disco… tout est permis, tant que ça fait sourire.
+            </p>
+            <div class="theme__chips">
+              <span class="theme__chip">Glitter</span>
+              <span class="theme__chip">Diva</span>
+              <span class="theme__chip">Iconique</span>
+              <span class="theme__chip">80s</span>
+              <span class="theme__chip">Camp</span>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Programme -->
       <section id="programme" class="schedule">
-        <h2 class="schedule__heading">Le programme</h2>
+        <div class="schedule__header">
+          <p class="schedule__eyebrow">Le programme</p>
+          <h2 class="schedule__heading">Trois jours pour célébrer</h2>
+          <p class="schedule__intro">
+            On garde l'esprit simple : profiter, manger, danser, chiller.
+          </p>
+        </div>
 
         <div class="schedule__layout">
-          <article class="schedule__item card">
+          <article class="schedule__item">
             <h3 class="schedule__item-title">🔥 Samedi – Ça démarre fort</h3>
             <p class="schedule__item-text">
               Barbecue, piscine, musique… et très vite, tout le monde glisse
-              dans son personnage. La soirée part en mode fête iconique jusqu'au
-              bout de la nuit.
+              dans son personnage. La soirée part en mode fête iconique.
             </p>
           </article>
 
-          <article class="schedule__item card">
+          <article class="schedule__item">
             <h3 class="schedule__item-title">🌞 Dimanche – Chill iconique</h3>
             <p class="schedule__item-text">
               Brunch, piscine, détente, rires, débriefs de la veille… On
-              prolonge l'ambiance, mais version soft & solaire.
+              prolonge l'ambiance version douce et solaire.
             </p>
           </article>
 
-          <article class="schedule__item card">
+          <article class="schedule__item">
             <h3 class="schedule__item-title">☕ Lundi – Retour tout doux</h3>
             <p class="schedule__item-text">
               Petit-déj ensemble, derniers moments cool avant de reprendre la
@@ -136,45 +225,187 @@
         </div>
       </section>
 
-      <!-- Réservation -->
-      <section id="reservation">
-        <h2 class="reservation__heading">Réserve ton icône</h2>
-        <p class="reservation__text">
-          Réserve ton icône pour le week-end Bitch’iconic. Tu pourras choisir
-          ton personnage et le personnage de tes amis.
-        </p>
-        <button type="button" class="reservation__button">Réserver</button>
+      <!-- Galerie -->
+      <section id="galerie" class="gallery">
+        <div class="gallery__header">
+          <p class="gallery__eyebrow">Galerie</p>
+          <h2 class="gallery__title">Les photos arrivent bientôt</h2>
+          <p class="gallery__subtitle">
+            Ici on mettra les meilleurs moments du week-end.
+          </p>
+        </div>
+
+        <div class="gallery__grid">
+          <div class="gallery__item">
+            <div class="gallery__placeholder">Photo à venir</div>
+          </div>
+          <div class="gallery__item">
+            <div class="gallery__placeholder">Photo à venir</div>
+          </div>
+          <div class="gallery__item">
+            <div class="gallery__placeholder">Photo à venir</div>
+          </div>
+          <div class="gallery__item">
+            <div class="gallery__placeholder">Photo à venir</div>
+          </div>
+          <div class="gallery__item">
+            <div class="gallery__placeholder">Photo à venir</div>
+          </div>
+          <div class="gallery__item">
+            <div class="gallery__placeholder">Photo à venir</div>
+          </div>
+        </div>
       </section>
 
       <!-- Infos pratiques -->
       <section id="infos" class="info">
-        <h2 class="info__heading">Infos pratiques</h2>
-
-        <article class="info__item">
-          <h3 class="info__item-title">📅 Dates</h3>
-          <p class="info__item-text">
-            Du samedi 18 juillet (après-midi) au lundi 20 juillet (matin).
+        <div class="info__header">
+          <p class="info__eyebrow">Infos pratiques</p>
+          <h2 class="info__heading">Tout ce qu'il faut savoir</h2>
+          <p class="info__intro">
+            On se retrouve dans le Loiret pour un week-end convivial et sans
+            prise de tête.
           </p>
-        </article>
+        </div>
 
-        <article class="info__item">
-          <h3 class="info__item-title">📌 Lieu</h3>
-          <p class="info__item-text">
-            Les Cabanes Parisiennes – Châtillon-Coligny.
+        <div class="info__grid">
+          <article class="info__item">
+            <h3 class="info__item-title">📅 Dates</h3>
+            <p class="info__item-text">
+              Du samedi 18 juillet 2026 (après-midi) au lundi 20 juillet 2026
+              (matin).
+            </p>
+          </article>
+
+          <article class="info__item">
+            <h3 class="info__item-title">📌 Lieu</h3>
+            <p class="info__item-text">
+              Les Cabanes Parisiennes – 45230 Sainte-Geneviève-des-Bois.
+            </p>
+          </article>
+
+          <article class="info__item">
+            <h3 class="info__item-title">🎒 À prévoir</h3>
+            <p class="info__item-text">
+              Tenue iconique, maillot, serviette, et ton énergie de star.
+            </p>
+          </article>
+        </div>
+
+        <div class="info__map">
+          <iframe
+            title="Carte - Les Cabanes Parisiennes"
+            src="https://www.google.com/maps?q=45230%20Sainte-Genevi%C3%A8ve-des-Bois&output=embed"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <!-- Réservation -->
+      <section id="reservation" class="rsvp">
+        <div class="rsvp__header">
+          <p class="rsvp__eyebrow">Confirmation</p>
+          <h2 class="rsvp__heading">Confirme ta présence</h2>
+          <p class="rsvp__text">
+            Formulaire en cours de mise en place. Tu peux déjà me dire si tu
+            viens, ça m'aide à m'organiser.
           </p>
-        </article>
+        </div>
 
-        <p class="info__summary">
-          Un week-end entier pour profiter, faire la fête, chiller et se
-          transformer en icône.
-        </p>
+        <form class="rsvp__form" action="" method="post">
+          <div class="rsvp__field">
+            <label class="rsvp__label" for="rsvp-firstname">Prénom</label>
+            <input
+              class="rsvp__input"
+              id="rsvp-firstname"
+              name="firstname"
+              type="text"
+              placeholder="Ton prénom"
+            />
+          </div>
+
+          <div class="rsvp__field">
+            <label class="rsvp__label" for="rsvp-lastname">Nom</label>
+            <input
+              class="rsvp__input"
+              id="rsvp-lastname"
+              name="lastname"
+              type="text"
+              placeholder="Ton nom"
+            />
+          </div>
+
+          <div class="rsvp__field">
+            <label class="rsvp__label" for="rsvp-email">Email</label>
+            <input
+              class="rsvp__input"
+              id="rsvp-email"
+              name="email"
+              type="email"
+              placeholder="ton@email.com"
+            />
+          </div>
+
+          <div class="rsvp__field">
+            <label class="rsvp__label" for="rsvp-status">Présence</label>
+            <select class="rsvp__select" id="rsvp-status" name="status">
+              <option value="">Je te dis vite</option>
+              <option value="yes">Je viens</option>
+              <option value="maybe">Peut-être</option>
+              <option value="no">Je ne peux pas</option>
+            </select>
+          </div>
+
+          <div class="rsvp__field">
+            <label class="rsvp__label" for="rsvp-persona">Ton personnage</label>
+            <input
+              class="rsvp__input"
+              id="rsvp-persona"
+              name="persona"
+              type="text"
+              placeholder="Ton idole"
+            />
+          </div>
+
+          <div class="rsvp__field">
+            <label class="rsvp__label" for="rsvp-arrival">Arrivée</label>
+            <select class="rsvp__select" id="rsvp-arrival" name="arrival">
+              <option value="">Je précise plus tard</option>
+              <option value="sat">Samedi après-midi</option>
+              <option value="sat-evening">Samedi fin de journée</option>
+              <option value="sun">Dimanche</option>
+            </select>
+          </div>
+
+          <div class="rsvp__field rsvp__field--full">
+            <label class="rsvp__label" for="rsvp-message">Message</label>
+            <textarea
+              class="rsvp__textarea"
+              id="rsvp-message"
+              name="message"
+              rows="4"
+              placeholder="Un mot, une info utile, une idée..."
+            ></textarea>
+          </div>
+
+          <div class="rsvp__actions">
+            <button class="rsvp__button" type="submit">
+              Envoyer ma réponse
+            </button>
+            <p class="rsvp__note">
+              Le formulaire n'est pas encore connecté, tes réponses ne seront
+              pas envoyées pour l'instant.
+            </p>
+          </div>
+        </form>
       </section>
     </main>
 
     <!-- Footer -->
     <footer class="site-footer">
       <p class="site-footer__note">
-        © 2025 Bitch’iconic. Tous droits réservés.
+        © 2026 Bitch’iconic. Hâte de célébrer ça avec vous.
       </p>
     </footer>
 
